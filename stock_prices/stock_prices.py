@@ -14,21 +14,14 @@ import argparse
 
 # optimize using max profit variable and a lowest price yet variable that
 def find_max_profit(prices):
-    print("prices: ", prices)
     big_diff = prices[1] - prices[0]
-    print("big_diff: ", big_diff)
     current_min = prices[0]
     for i in range(len(prices)):
-        print("price: ", prices[i])
         if i > 0:
             if prices[i] - current_min > big_diff:
                 big_diff = prices[i] - current_min
-                print("big_diff: ", big_diff)
             if current_min > prices[i]:
                 current_min = prices[i]
-                print("current_min: ", current_min)
-        print("")
-    print("=======================================================")
     return big_diff
 
 
